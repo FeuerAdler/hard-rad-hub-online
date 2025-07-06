@@ -10,14 +10,12 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Events', href: '/events' },
-    { name: 'History', href: '/history' },
-    { name: 'Club', href: '/club' },
-    { name: 'Sponsors', href: '/sponsors' },
+    { name: 'Verein', href: '/club' },
     { name: 'News', href: '/news' },
     { name: 'Termine', href: '/termine' },
-    { name: 'Dokumente', href: '/documents' },
+    { name: 'Sponsoren', href: '/sponsors' },
     { name: 'Mitglied werden', href: '/membership' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Kontakt', href: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
