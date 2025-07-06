@@ -52,7 +52,7 @@ const Sponsors = () => {
 
   const benefits = [
     {
-      icon: <Users className="h-8 w-8 text-blue-600" />,
+      icon: <Users className="h-8 w-8 text-yellow-500" />,
       title: "Vereinsgemeinschaft",
       description: "Werden Sie Teil unserer starken Radsport-Community mit über 150 aktiven Mitgliedern."
     },
@@ -97,7 +97,7 @@ const Sponsors = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-xl font-bold text-gray-900">{sponsor.name}</h3>
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
                       {sponsor.category}
                     </span>
                   </div>
@@ -106,7 +106,7 @@ const Sponsors = () => {
                     href={sponsor.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-yellow-600 hover:text-yellow-800 font-medium"
                   >
                     Website besuchen <ExternalLink className="ml-1 h-4 w-4" />
                   </a>
@@ -136,7 +136,7 @@ const Sponsors = () => {
                     href={sponsor.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+                    className="inline-flex items-center text-yellow-600 hover:text-yellow-800 font-medium text-sm"
                   >
                     Website <ExternalLink className="ml-1 h-3 w-3" />
                   </a>
@@ -164,49 +164,8 @@ const Sponsors = () => {
           </div>
         </div>
 
-        {/* Sponsorship Packages */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Sponsoring-Pakete
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-gold-400">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Gold Partner</h3>
-              <ul className="space-y-2 text-gray-600 mb-6">
-                <li>• Logo auf Vereinstrikots</li>
-                <li>• Präsenz bei allen Veranstaltungen</li>
-                <li>• Website-Integration</li>
-                <li>• Exklusive Vereinsrabatte</li>
-              </ul>
-              <p className="text-2xl font-bold text-blue-600">€2.500/Jahr</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-gray-400">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Silber Partner</h3>
-              <ul className="space-y-2 text-gray-600 mb-6">
-                <li>• Logo auf Vereinsausrüstung</li>
-                <li>• Präsenz bei Hauptveranstaltungen</li>
-                <li>• Website-Erwähnung</li>
-                <li>• Vereinsrabatte</li>
-              </ul>
-              <p className="text-2xl font-bold text-blue-600">€1.500/Jahr</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-orange-400">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Bronze Partner</h3>
-              <ul className="space-y-2 text-gray-600 mb-6">
-                <li>• Logo auf Vereinsmaterialien</li>
-                <li>• Website-Erwähnung</li>
-                <li>• Event-Unterstützung</li>
-                <li>• Netzwerk-Zugang</li>
-              </ul>
-              <p className="text-2xl font-bold text-blue-600">€750/Jahr</p>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
-        <div className="bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center">
+        <div className="bg-yellow-500 text-white p-8 rounded-lg shadow-lg text-center">
           <h3 className="text-3xl font-bold mb-4">Werden Sie unser Partner!</h3>
           <p className="text-xl mb-6 opacity-90">
             Unterstützen Sie den Radsport in Hard und profitieren Sie von einer 
@@ -214,7 +173,7 @@ const Sponsors = () => {
           </p>
           <a 
             href="/contact" 
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold inline-block"
+            className="bg-white text-yellow-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold inline-block"
           >
             Kontakt aufnehmen
           </a>

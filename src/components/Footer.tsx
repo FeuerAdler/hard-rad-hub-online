@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Bike className="h-8 w-8 text-blue-400" />
+              <Bike className="h-8 w-8 text-yellow-400" />
               <span className="text-2xl font-bold">RV Hard</span>
             </div>
             <p className="text-gray-300 mb-4">
@@ -16,10 +16,10 @@ const Footer = () => {
               Seit Jahren fördern wir den Radsport und bringen die Gemeinschaft zusammen.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-yellow-400 transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-yellow-400 transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
             </div>
@@ -46,10 +46,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Links</h3>
             <div className="space-y-2 text-gray-300">
-              <a href="/club" className="block hover:text-blue-400 transition-colors">Über uns</a>
-              <a href="/events" className="block hover:text-blue-400 transition-colors">Veranstaltungen</a>
-              <a href="/news" className="block hover:text-blue-400 transition-colors">Neuigkeiten</a>
-              <a href="/contact" className="block hover:text-blue-400 transition-colors">Kontakt</a>
+              <a href="/club" className="block hover:text-yellow-400 transition-colors">Über uns</a>
+              <a href="/events" className="block hover:text-yellow-400 transition-colors">Veranstaltungen</a>
+              <a href="/news" className="block hover:text-yellow-400 transition-colors">Neuigkeiten</a>
+              <a href="/membership" className="block hover:text-yellow-400 transition-colors">Mitglied werden</a>
+              <a href="/contact" className="block hover:text-yellow-400 transition-colors">Kontakt</a>
             </div>
           </div>
         </div>
