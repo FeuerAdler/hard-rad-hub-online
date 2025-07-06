@@ -1,0 +1,239 @@
+
+import { ExternalLink, Handshake, Award, Users } from 'lucide-react';
+
+const Sponsors = () => {
+  const mainSponsors = [
+    {
+      name: "Bike Shop Vorarlberg",
+      logo: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      description: "Unser Hauptsponsor für Fahrräder und Equipment. Spezielle Konditionen für Vereinsmitglieder.",
+      website: "https://bikeshop-vorarlberg.at",
+      category: "Hauptsponsor"
+    },
+    {
+      name: "Hotel Seeblick Hard",
+      logo: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      description: "Gastgeber für unsere Vereinsveranstaltungen und Unterbringung für auswärtige Gäste.",
+      website: "https://hotel-seeblick-hard.at",
+      category: "Hauptsponsor"
+    }
+  ];
+
+  const supportingSponsors = [
+    {
+      name: "Café Rad & Tat",
+      logo: "https://images.unsplash.com/photo-1559496417-e7f25cb247cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      description: "Beliebter Treffpunkt nach den Trainingsfahrten.",
+      website: "https://cafe-rad-tat.at",
+      category: "Partner"
+    },
+    {
+      name: "Sport Medical Center",
+      logo: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      description: "Medizinische Betreuung und Sportverletzungen.",
+      website: "https://sportmedical-center.at",
+      category: "Partner"
+    },
+    {
+      name: "Fitness Studio Hard",
+      logo: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      description: "Krafttraining und Rehabilitation für unsere Athleten.",
+      website: "https://fitness-hard.at",
+      category: "Partner"
+    },
+    {
+      name: "Elektro Müller GmbH",
+      logo: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      description: "E-Bike Service und Elektroinstallationen.",
+      website: "https://elektro-mueller.at",
+      category: "Partner"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Users className="h-8 w-8 text-blue-600" />,
+      title: "Vereinsgemeinschaft",
+      description: "Werden Sie Teil unserer starken Radsport-Community mit über 150 aktiven Mitgliedern."
+    },
+    {
+      icon: <Award className="h-8 w-8 text-green-600" />,
+      title: "Sichtbarkeit",
+      description: "Präsentieren Sie Ihr Unternehmen bei unseren 25+ Veranstaltungen pro Jahr."
+    },
+    {
+      icon: <Handshake className="h-8 w-8 text-purple-600" />,
+      title: "Partnerschaft",
+      description: "Profitieren Sie von langfristigen, vertrauensvollen Geschäftsbeziehungen."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Unsere Sponsoren
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Gemeinsam stark! Unsere Partner unterstützen den RV Hard und ermöglichen 
+            es uns, den Radsport in der Region zu fördern und großartige Veranstaltungen zu organisieren.
+          </p>
+        </div>
+
+        {/* Main Sponsors */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Hauptsponsoren
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {mainSponsors.map((sponsor, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">{sponsor.name}</h3>
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {sponsor.category}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{sponsor.description}</p>
+                  <a 
+                    href={sponsor.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Website besuchen <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Supporting Sponsors */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Partner & Unterstützer
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportingSponsors.map((sponsor, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name}
+                  className="w-full h-32 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{sponsor.name}</h3>
+                  <p className="text-gray-600 text-sm mb-3">{sponsor.description}</p>
+                  <a 
+                    href={sponsor.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+                  >
+                    Website <ExternalLink className="ml-1 h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Warum Partner werden?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Sponsorship Packages */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Sponsoring-Pakete
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-gold-400">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Gold Partner</h3>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• Logo auf Vereinstrikots</li>
+                <li>• Präsenz bei allen Veranstaltungen</li>
+                <li>• Website-Integration</li>
+                <li>• Exklusive Vereinsrabatte</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-600">€2.500/Jahr</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-gray-400">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Silber Partner</h3>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• Logo auf Vereinsausrüstung</li>
+                <li>• Präsenz bei Hauptveranstaltungen</li>
+                <li>• Website-Erwähnung</li>
+                <li>• Vereinsrabatte</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-600">€1.500/Jahr</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-orange-400">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Bronze Partner</h3>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• Logo auf Vereinsmaterialien</li>
+                <li>• Website-Erwähnung</li>
+                <li>• Event-Unterstützung</li>
+                <li>• Netzwerk-Zugang</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-600">€750/Jahr</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center">
+          <h3 className="text-3xl font-bold mb-4">Werden Sie unser Partner!</h3>
+          <p className="text-xl mb-6 opacity-90">
+            Unterstützen Sie den Radsport in Hard und profitieren Sie von einer 
+            starken Partnerschaft mit unserem traditionsreichen Verein.
+          </p>
+          <a 
+            href="/contact" 
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold inline-block"
+          >
+            Kontakt aufnehmen
+          </a>
+        </div>
+
+        {/* Thank You Section */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Herzlichen Dank!
+          </h3>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Wir danken allen unseren Sponsoren und Partnern für ihre Unterstützung. 
+            Durch ihre Hilfe können wir den Radsport in unserer Region fördern und 
+            großartige Veranstaltungen für unsere Mitglieder und die Gemeinschaft organisieren.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sponsors;
