@@ -11,9 +11,8 @@ const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'Events', href: '/events' },
     { name: 'Verein', href: '/club' },
+    { name: 'Geschichte', href: '/history' },
     { name: 'News', href: '/news' },
-    { name: 'Termine', href: '/termine' },
-    { name: 'Sponsoren', href: '/sponsors' },
     { name: 'Mitglied werden', href: '/membership' },
     { name: 'Kontakt', href: '/contact' },
   ];
@@ -26,8 +25,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Bike className="h-8 w-8 text-yellow-500" />
-              <span className="text-xl font-bold text-gray-900">RV Hard</span>
+              <Bike className="h-8 w-8 text-[#ffc107]" />
+              <span className="text-xl font-bold text-[#333]">RV Hard</span>
             </Link>
           </div>
 
@@ -39,8 +38,8 @@ const Header = () => {
                 to={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'text-yellow-600 bg-yellow-50'
-                    : 'text-gray-700 hover:text-yellow-600 hover:bg-yellow-50'
+                    ? 'text-[#e0a800] bg-[#ffc107]/10'
+                    : 'text-[#333] hover:text-[#e0a800] hover:bg-[#ffc107]/10'
                 }`}
               >
                 {item.name}
@@ -52,7 +51,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-yellow-600"
+              className="text-[#333] hover:text-[#e0a800]"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -70,8 +69,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-yellow-600 bg-yellow-50'
-                      : 'text-gray-700 hover:text-yellow-600 hover:bg-yellow-50'
+                      ? 'text-[#e0a800] bg-[#ffc107]/10'
+                      : 'text-[#333] hover:text-[#e0a800] hover:bg-[#ffc107]/10'
                   }`}
                 >
                   {item.name}
