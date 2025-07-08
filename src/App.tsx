@@ -12,6 +12,7 @@ import EventDetail from "./pages/EventDetail";
 import History from "./pages/History";
 import Club from "./pages/Club";
 import News from "./pages/News";
+import Termine from "./pages/Termine";
 import Membership from "./pages/Membership";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/events" element={<Events />} />
               <Route path="/events/:id" element={<EventDetail />} />
+              <Route path="/termine" element={<Termine />} />
               <Route path="/history" element={<History />} />
               <Route path="/club" element={<Club />} />
               <Route path="/news" element={<News />} />
