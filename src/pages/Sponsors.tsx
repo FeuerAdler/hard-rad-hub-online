@@ -1,5 +1,5 @@
 
-import { ExternalLink, Handshake, Award, Users } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const Sponsors = () => {
   const mainSponsors = [
@@ -50,23 +50,9 @@ const Sponsors = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Users className="h-8 w-8 text-yellow-500" />,
-      title: "Vereinsgemeinschaft",
-      description: "Werden Sie Teil unserer starken Radsport-Community mit über 150 aktiven Mitgliedern."
-    },
-    {
-      icon: <Award className="h-8 w-8 text-green-600" />,
-      title: "Sichtbarkeit",
-      description: "Präsentieren Sie Ihr Unternehmen bei unseren 25+ Veranstaltungen pro Jahr."
-    },
-    {
-      icon: <Handshake className="h-8 w-8 text-purple-600" />,
-      title: "Partnerschaft",
-      description: "Profitieren Sie von langfristigen, vertrauensvollen Geschäftsbeziehungen."
-    }
-  ];
+  const handleSponsorClick = (website: string) => {
+    window.open(website, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -88,7 +74,11 @@ const Sponsors = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {mainSponsors.map((sponsor, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                onClick={() => handleSponsorClick(sponsor.website)}
+              >
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name}
@@ -102,14 +92,9 @@ const Sponsors = () => {
                     </span>
                   </div>
                   <p className="text-gray-600 mb-4">{sponsor.description}</p>
-                  <a 
-                    href={sponsor.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-yellow-600 hover:text-yellow-800 font-medium"
-                  >
+                  <div className="inline-flex items-center text-yellow-600 hover:text-yellow-800 font-medium">
                     Website besuchen <ExternalLink className="ml-1 h-4 w-4" />
-                  </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -123,7 +108,11 @@ const Sponsors = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportingSponsors.map((sponsor, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                onClick={() => handleSponsorClick(sponsor.website)}
+              >
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name}
@@ -132,33 +121,10 @@ const Sponsors = () => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{sponsor.name}</h3>
                   <p className="text-gray-600 text-sm mb-3">{sponsor.description}</p>
-                  <a 
-                    href={sponsor.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-yellow-600 hover:text-yellow-800 font-medium text-sm"
-                  >
+                  <div className="inline-flex items-center text-yellow-600 hover:text-yellow-800 font-medium text-sm">
                     Website <ExternalLink className="ml-1 h-3 w-3" />
-                  </a>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Warum Partner werden?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-                <div className="flex justify-center mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>

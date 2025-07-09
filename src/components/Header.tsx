@@ -14,6 +14,7 @@ const Header = () => {
     { name: 'Verein', href: '/club' },
     { name: 'Geschichte', href: '/history' },
     { name: 'News', href: '/news' },
+    { name: 'Sponsoren', href: '/sponsors' },
     { name: 'Mitglied werden', href: '/membership' },
     { name: 'Kontakt', href: '/contact' },
   ];

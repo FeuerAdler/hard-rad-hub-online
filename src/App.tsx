@@ -15,6 +15,7 @@ import News from "./pages/News";
 import Termine from "./pages/Termine";
 import Membership from "./pages/Membership";
 import Contact from "./pages/Contact";
+import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/history" element={<History />} />
               <Route path="/club" element={<Club />} />
               <Route path="/news" element={<News />} />
+              <Route path="/sponsors" element={<Sponsors />} />
               <Route path="/membership" element={<Membership />} />
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
