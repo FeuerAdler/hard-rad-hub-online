@@ -65,7 +65,7 @@ const SponsorsCarousel = () => {
         </div>
 
         <Carousel 
-          className="w-full max-w-5xl mx-auto"
+          className="w-full max-w-6xl mx-auto"
           setApi={setApi}
           opts={{
             align: "start",
@@ -74,16 +74,16 @@ const SponsorsCarousel = () => {
         >
           <CarouselContent>
             {sponsors.map((sponsor, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-4">
+              <CarouselItem key={index} className="basis-1/4 md:basis-1/5">
+                <div className="p-2">
                   <div 
-                    className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow cursor-pointer"
+                    className="bg-white rounded-lg shadow-lg p-4 text-center hover:shadow-xl transition-shadow cursor-pointer aspect-square flex items-center justify-center"
                     onClick={() => handleSponsorClick(sponsor.website)}
                   >
                     <img 
                       src={sponsor.logo} 
                       alt={sponsor.name}
-                      className="w-full h-32 object-cover rounded-lg"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
                 </div>

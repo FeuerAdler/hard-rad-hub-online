@@ -102,7 +102,7 @@ const Sponsors = () => {
         </div>
 
         {/* Supporting Sponsors */}
-        <div className="mb-16">
+        <div className="mb-12">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
             Partner & Unterstützer
           </h2>
@@ -130,23 +130,8 @@ const Sponsors = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-yellow-500 text-white p-8 rounded-lg shadow-lg text-center">
-          <h3 className="text-3xl font-bold mb-4">Werden Sie unser Partner!</h3>
-          <p className="text-xl mb-6 opacity-90">
-            Unterstützen Sie den Radsport in Hard und profitieren Sie von einer 
-            starken Partnerschaft mit unserem traditionsreichen Verein.
-          </p>
-          <a 
-            href="/contact" 
-            className="bg-white text-yellow-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold inline-block"
-          >
-            Kontakt aufnehmen
-          </a>
-        </div>
-
-        {/* Thank You Section */}
-        <div className="mt-16 text-center">
+        {/* Thank You Section - now placed higher */}
+        <div className="mb-12 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Herzlichen Dank!
           </h3>
@@ -155,6 +140,21 @@ const Sponsors = () => {
             Durch ihre Hilfe können wir den Radsport in unserer Region fördern und 
             großartige Veranstaltungen für unsere Mitglieder und die Gemeinschaft organisieren.
           </p>
+        </div>
+
+        {/* CTA Section - smaller */}
+        <div className="bg-yellow-500 text-white p-6 rounded-lg shadow-lg text-center">
+          <h3 className="text-2xl font-bold mb-3">Werden Sie unser Partner!</h3>
+          <p className="text-lg mb-4 opacity-90">
+            Unterstützen Sie den Radsport in Hard und profitieren Sie von einer 
+            starken Partnerschaft mit unserem traditionsreichen Verein.
+          </p>
+          <a 
+            href="/contact" 
+            className="bg-white text-yellow-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold inline-block"
+          >
+            Kontakt aufnehmen
+          </a>
         </div>
       </div>
     </div>
